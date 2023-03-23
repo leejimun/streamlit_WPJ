@@ -1,11 +1,16 @@
 import streamlit as st
 import pandas as pd
+import plotly
 import plotly.graph_objects as go
 import folium
 from pyparsing import empty
 from streamlit_folium import st_folium
 from streamlit_echarts import st_echarts
 
+def main():
+    pass
+if __name__=='__main__':
+    main()
 # 페이지 기본 설정
 st.set_page_config(
     page_title= '장애인 이동보조수단 현황',
