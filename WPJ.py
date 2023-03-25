@@ -6,7 +6,7 @@ import folium
 from pyparsing import empty
 from streamlit_folium import st_folium
 from streamlit_echarts import st_echarts
-
+import json
 
 # 페이지 기본 설정
 st.set_page_config(
