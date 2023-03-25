@@ -2,8 +2,6 @@ import plotly.graph_objects as go
 import streamlit as st
 import pandas as pd
 import plotly
-import altair as alt
-import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 
@@ -13,13 +11,13 @@ left_column,right_column = st.columns(2)
 with left_column:
     st.title('횡단보도')
     st.text('')
-    image = Image.open('datas\image\횡단보도.png')
+    image = Image.open('datas/image/횡단보도.png')
 
     st.image(image)
 
 with right_column:
     file_name = '횡단보도_차트용.csv'
-    path = "datas\\" + file_name
+    path = "datas/" + file_name
     df = pd.read_csv(path, encoding='cp949')
 
     df.set_index('시도명', drop=True, inplace=True)
@@ -37,7 +35,7 @@ tab1, tab2, tab3, tab4 = st.tabs(["전체", "보행자신호등", "보도턱낮�
 
 with tab1:
     file_name = '횡단보도.csv'
-    path = "datas\\" + file_name
+    path = "datas/" + file_name
     data = pd.read_csv(path, encoding='cp949')
 
     df = pd.DataFrame({
@@ -50,7 +48,7 @@ with tab1:
 with tab2:
 
     file_name = '보행자신호등_횡단보도.csv'
-    path = "datas\\" + file_name
+    path = "datas/" + file_name
     data = pd.read_csv(path, encoding='cp949')
 
     df = pd.DataFrame({
@@ -61,7 +59,7 @@ with tab2:
 
     st.text('')
     st.subheader('참고사진')
-    image = Image.open('datas\image\보행자신호등_횡단보도.png')
+    image = Image.open('datas/image/보행자신호등_횡단보도.png')
     st.image(image)
     st.caption('출처: https://blog.bullsone.com/2278')
 
