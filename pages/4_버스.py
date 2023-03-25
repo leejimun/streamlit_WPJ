@@ -2,8 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
-import altair as alt
+
 
 # 페이지 기본 설정
 st.set_page_config(
