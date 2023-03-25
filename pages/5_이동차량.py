@@ -20,7 +20,7 @@ with left_column:
 
 with right_column:
     file_name = '교통약자이동지원_차트용.csv'
-    path = "D:\workspace\pythonProject1\datas\\" + file_name
+    path = "datas\\" + file_name
     df = pd.read_csv(path, encoding='cp949')
 
     df.set_index('시도', drop=True, inplace=True)
@@ -38,7 +38,7 @@ tab1,tab2 = st.tabs(["이동지원차량",' '])
 
 with tab1:
     file_name = '교통약자이동지원.csv'
-    path = "D:\workspace\pythonProject1\datas\\" + file_name
+    path = "datas\\" + file_name
     data = pd.read_csv(path, encoding='cp949')
 
     df = pd.DataFrame({
