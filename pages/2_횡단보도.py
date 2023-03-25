@@ -68,7 +68,7 @@ with tab2:
 with tab3:
 
     file_name = '보도턱낮춤_횡단보도.csv'
-    path = "datas\\" + file_name
+    path = "datas/" + file_name
 
     data = pd.read_csv(path, encoding='cp949')
 
@@ -79,14 +79,14 @@ with tab3:
     st.map(df, zoom=5.5)
     st.text('')
     st.subheader('참고사진')
-    image = Image.open('datas\image\보도턱낮춤.jpeg')
+    image = Image.open('datas/image/보도턱낮춤.jpeg')
     st.image(image)
     st.caption('출처: https://m.yna.co.kr/view/AKR20150423018300004')
 
 with tab4:
 
     file_name = '점자블록_횡단보도.csv'
-    path = "datas\\" + file_name
+    path = "datas/" + file_name
 
     data = pd.read_csv(path, encoding='cp949')
 
@@ -98,6 +98,6 @@ with tab4:
 
     st.text('')
     st.subheader('참고사진')
-    image = Image.open('datas\image\횡단보도_점자블록.jpg')
+    image = Image.open('datas/image/횡단보도_점자블록.jpg')
     st.image(image)
     st.caption('출처: http://www.safetimes.co.kr/news/articleView.html?idxno=201809')

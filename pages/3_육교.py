@@ -9,13 +9,13 @@ st.set_page_config(
 left_column,right_column = st.columns(2)
 with left_column:
     st.title('육교')
-    image = Image.open('datas\image\육교.png')
+    image = Image.open('datas/image/육교.png')
 
     st.image(image)
 
 with right_column:
     file_name = '육교_차트용.csv'
-    path = "datas\\" + file_name
+    path = "datas/" + file_name
     df = pd.read_csv(path, encoding='cp949')
 
     df.set_index('시도', drop=True, inplace=True)
@@ -35,7 +35,7 @@ tab1, tab2, tab3, tab4 = st.tabs(["육교", "엘리베이터", "경사로",'점�
 with tab1:
 
     file_name = '육교.csv'
-    path = "datas\\" + file_name
+    path = "datas/" + file_name
 
     data = pd.read_csv(path, encoding='cp949')
 
@@ -50,7 +50,7 @@ with tab1:
 with tab2:
 
     file_name = '육교_엘리베이터.csv'
-    path = "datas\\" + file_name
+    path = "datas/" + file_name
 
     data = pd.read_csv(path, encoding='cp949')
 
@@ -62,14 +62,14 @@ with tab2:
 
     st.text('')
     st.subheader('참고사진')
-    image = Image.open('datas\image\육교_엘리베이터.jpg')
+    image = Image.open('datas/image/육교_엘리베이터.jpg')
     st.image(image)
     st.caption('출처: http://www.daejonilbo.com/news/articleView.html?idxno=1494074')
 
 with tab3:
 
     file_name = '육교_경사로.csv'
-    path = "datas\\" + file_name
+    path = "datas/" + file_name
 
     data = pd.read_csv(path, encoding='cp949')
 
@@ -81,14 +81,14 @@ with tab3:
 
     st.text('')
     st.subheader('참고사진')
-    image = Image.open('datas\image\육교_경사로.jpg')
+    image = Image.open('datas/image/육교_경사로.jpg')
     st.image(image)
     st.caption('출처: https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0000970676')
 
 with tab4:
 
     file_name = '육교_점자블럭.csv'
-    path = "datas\\" + file_name
+    path = "datas/" + file_name
 
     data = pd.read_csv(path, encoding='cp949')
 
@@ -102,6 +102,6 @@ with tab4:
 
     st.text('')
     st.subheader('참고사진')
-    image = Image.open('datas\image\육교_점자블록.jpg')
+    image = Image.open('datas/image/육교_점자블록.jpg')
     st.image(image)
     st.caption('출처: http://midammall.kr/board/bbs/board.php?bo_table=4_case_1&wr_id=158&page=3')

@@ -22,7 +22,7 @@ with left_column:
 
 with right_column:
     file_name = '신호등_차트용.csv'
-    path = "datas//" + file_name
+    path = "datas/" + file_name
     df = pd.read_csv(path, encoding='cp949')
 
     df.set_index('시도명', drop=True, inplace=True)
@@ -41,7 +41,7 @@ tab1, tab2, tab3 = st.tabs(["보행자신호등", "보행자작동신호기", "�
 with tab1:
 
     file_name = '보행자신호등.csv'
-    path = "datas//" + file_name
+    path = "datas/" + file_name
 
     data = pd.read_csv(path, encoding='cp949')
 
@@ -56,8 +56,7 @@ with tab1:
 with tab2:
 
     file_name = '보행자작동신호기_신호등.csv'
-    path = "datas//" + file_name
-
+    path = "datas/" + file_name
     data = pd.read_csv(path, encoding='cp949')
 
     df = pd.DataFrame({
@@ -73,7 +72,7 @@ with tab2:
 with tab3:
 
     file_name = '음향신호기_신호등.csv'
-    path = "datas//" + file_name
+    path = "datas/" + file_name
 
     data = pd.read_csv(path, encoding='cp949')
 
