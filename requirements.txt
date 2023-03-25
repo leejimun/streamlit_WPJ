@@ -1,3 +1,5 @@
 plotly
 folium
 pyparsing
+streamlit_folium
+streamlit_echarts
