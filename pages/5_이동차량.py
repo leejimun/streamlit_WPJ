@@ -1,8 +1,6 @@
 import plotly.graph_objects as go
 import streamlit as st
 import pandas as pd
-import altair as alt
-import numpy as np
 from PIL import Image
 
 st.set_page_config(
@@ -13,14 +11,12 @@ left_column,right_column = st.columns(2)
 
 with left_column:
     st.title('이동지원차량')
-
-    image = Image.open('datas\image\이동지원차량.png')
-
+    image = Image.open('datas/image/이동지원차량.png')
     st.image(image)
 
 with right_column:
     file_name = '교통약자이동지원_차트용.csv'
-    path = "datas\\" + file_name
+    path = "datas/" + file_name
     df = pd.read_csv(path, encoding='cp949')
 
     df.set_index('시도', drop=True, inplace=True)
@@ -38,7 +34,7 @@ tab1,tab2 = st.tabs(["이동지원차량",' '])
 
 with tab1:
     file_name = '교통약자이동지원.csv'
-    path = "datas\\" + file_name
+    path = "datas/" + file_name
     data = pd.read_csv(path, encoding='cp949')
 
     df = pd.DataFrame({
