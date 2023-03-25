@@ -379,20 +379,3 @@ with con9 :
 with empty2 :
     empty()
 
-import requests
-import base64
-
-# GitHub 저장소의 코드 파일 URL
-github_url = "https://raw.githubusercontent.com/leejimun/streamlit_WPJ/main/WPJ.py"
-
-# GitHub API를 사용하여 코드 파일 가져오기
-response = requests.get(github_url)
-
-# 코드 파일 내용을 base64로 인코딩
-code = base64.b64encode(response.content).decode()
-
-# 코드 파일 링크 생성
-link = f'<a href="data:file/txt;base64,{code}" download="WPJ.py">[장애인 도로시설 현황]</a>'
-
-# Streamlit 앱에 링크 추가
-st.markdown(link, unsafe_allow_html=True)
