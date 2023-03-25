@@ -7,10 +7,12 @@ from pyparsing import empty
 from streamlit_folium import st_folium
 from streamlit_echarts import st_echarts
 
+
 def main():
     pass
 if __name__=='__main__':
     main()
+
 # 페이지 기본 설정
 st.set_page_config(
     page_title= '장애인 이동보조수단 현황',
@@ -52,7 +54,7 @@ df1.set_index('연월', drop=True, inplace=True)
 df2 = pd.read_csv('datas/연령구간별성별.csv', encoding='cp949')
 text = ['영유아','아동','청소년','청년','중년','장년','노년']
 fig2 = go.Figure(
-    layout=go.Layout(title=go.layout.Title(text="연령구간별 성별 수급자 수"))
+    layout=go.Layout(title=go.layout.Title(text="연령구간별 성별 장애인구수"))
 )
 fig2.add_trace(go.Bar(
     y=text,
@@ -103,13 +105,6 @@ folium.Choropleth(
     line_opacity=0.2,
     legend_name='장애인 수'
 ).add_to(m)
-
-#2-4.
-
-
-
-
-
 
 #2-5. 각 분석항목에 대한 전체현황 차트
 # 도보(신호등, 횡단보도, 점자유무, 육교)
@@ -383,3 +378,21 @@ with con9 :
     st_echarts(options=option9, height="300px")
 with empty2 :
     empty()
+
+import requests
+import base64
+
+# GitHub 저장소의 코드 파일 URL
+github_url = "https://raw.githubusercontent.com/leejimun/streamlit_WPJ/main/WPJ.py"
+
+# GitHub API를 사용하여 코드 파일 가져오기
+response = requests.get(github_url)
+
+# 코드 파일 내용을 base64로 인코딩
+code = base64.b64encode(response.content).decode()
+
+# 코드 파일 링크 생성
+link = f'<a href="data:file/txt;base64,{code}" download="{WPJ.py}">[장애인 도로시설 현황]</a>'
+
+# Streamlit 앱에 링크 추가
+st.markdown(link, unsafe_allow_html=True)
