@@ -3,5 +3,4 @@ folium
 pyparsing
 streamlit_folium
 streamlit_echarts
-matplotlib.pyplot
-PIL
+matplotlib
