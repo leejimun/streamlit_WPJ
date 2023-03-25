@@ -80,8 +80,8 @@ fig2.update_layout(barmode='stack',
 
 # 2-3. 시도별 장애유형 현황
 df3 = pd.read_csv('datas/시도별장애유형별2.csv', encoding='cp949')
-sido = 'datas/Si_Do_map_utf8.json'
-with open(sido, 'r', encoding='utf-8') as f:
+sido_geo = 'datas/Si_Do_map_utf8.json'
+with open(sido_geo, 'r', encoding='euc-kr') as f:
     sido_geo = json.loads(f.read())
 
 # 대전 중심으로 folium 맵 부르기
